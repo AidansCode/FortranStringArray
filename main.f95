@@ -91,7 +91,7 @@ recursive subroutine getWordListFromFile(words, uniqueWords, totalWords)
 
       ! If the word is not a repeat
       if (.NOT. wordIsRepeat) then
-        Store in the current spot in the array, increment counters
+        ! Store in the current spot in the array, increment counters
         words(index) = line
         index = index + 1
         uniqueWords = uniqueWords + 1
@@ -116,7 +116,7 @@ program stringarray
   ! Print out the summary of the results (uniqueWords and totalWords entered)
   write(*, "(I2, A12, I2, A21)") uniqueWords, " out of the ", totalWords, " entered were unique."
   ! Print out a notice before printing all unique words
-  print *, NEW_LINE('A')//"Those unique words are as follows:"
+  print *, NEW_LINE('A')//" Those unique words are as follows:"
 
   ! Loop through the uniqueWords array an print each word on its own line
   do i = 1, uniqueWords
